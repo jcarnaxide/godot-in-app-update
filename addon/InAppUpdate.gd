@@ -14,7 +14,7 @@ func hello_world() -> void:
 	if _plugin_singleton == null:
 		InAppUpdate.log_error("%s plugin not initialized" % PLUGIN_SINGLETON_NAME)
 	else:
-		_plugin_singleton.helloWorld()
+		_plugin_singleton.hello_world()
 
 
 func _ready() -> void:

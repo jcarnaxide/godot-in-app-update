@@ -26,8 +26,8 @@ public class InAppUpdatePlugin extends GodotPlugin {
 	}
 
 	@UsedByGodot
-	public void helloWorld() {
-		Log.d(LOG_TAG, "helloWorld()");
+	public void hello_world() {
+		Log.d(LOG_TAG, "hello_world()");
 		activity.runOnUiThread(() -> {
             Toast.makeText(activity, "Hello World", Toast.LENGTH_LONG).show();
             Log.v(pluginName, "Hello World");
