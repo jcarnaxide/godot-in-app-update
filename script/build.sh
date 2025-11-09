@@ -269,7 +269,7 @@ then
 	create_multi_platform_archive
 
 	display_step "Copying Android release archive"
-	cp $ROOT_DIR/android/admob/build/dist/$PLUGIN_NAME-Android-v$PLUGIN_VERSION.zip $DEST_DIR
+	cp $ROOT_DIR/android/inappupdate/build/dist/$PLUGIN_NAME-Android-v$PLUGIN_VERSION.zip $DEST_DIR
 
 	display_step "Copying iOS release archive"
 	cp $ROOT_DIR/ios/build/release/$PLUGIN_NAME-iOS-v$PLUGIN_VERSION.zip $DEST_DIR

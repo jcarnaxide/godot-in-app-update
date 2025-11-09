@@ -17,7 +17,7 @@ extra.apply {
 	// Plugin details
 	set("pluginNodeName", commonProperties.getProperty("pluginNodeName"))
 	set("pluginName", "${get("pluginNodeName")}Plugin")
-	set("pluginPackageName", "org.godotengine.plugin.android.admob")
+	set("pluginPackageName", "org.godotengine.plugin.android.inappupdate")
 	set("pluginVersion", commonProperties.getProperty("pluginVersion"))
 	set("pluginArchive", "${get("pluginName")}-Android-v${get("pluginVersion")}.zip")
 

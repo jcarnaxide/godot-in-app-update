@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:AdmobPlugin.xcodeproj">
+      location = "self:InAppUpdatePlugin.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:./Pods/Pods.xcodeproj">

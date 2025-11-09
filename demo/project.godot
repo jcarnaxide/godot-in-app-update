@@ -10,10 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Admob Demo"
+config/name="InAppUpdate Demo"
 run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://assets/admob-android.png"
 
 [debug]
 
@@ -29,7 +28,7 @@ window/handheld/orientation=1
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AdmobPlugin/plugin.cfg")
+enabled=PackedStringArray("res://addons/InAppUpdatePlugin/plugin.cfg")
 
 [rendering]
 
