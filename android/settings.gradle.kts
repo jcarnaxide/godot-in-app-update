@@ -21,5 +21,5 @@ dependencyResolutionManagement {
 	}
 }
 
-rootProject.name = "godot-admob-plugin"
-include(":admob")
+rootProject.name = "godot-in-app-update"
+include(":inappupdate")
