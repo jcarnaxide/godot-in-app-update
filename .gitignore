@@ -1,0 +1,38 @@
+#
+# © 2025-present https://github.com/jcarnaxide
+#
+
+demo/addons
+demo/android
+demo/ios
+build/
+release/
+export.cfg
+
+# General
+*.lock
+*.log
+
+# Android
+.gradle/
+*.jar
+!android/gradle/wrapper/gradle-wrapper.jar
+*.aar
+local.properties
+
+# Android Studio/IntelliJ
+.idea/
+
+# iOS
+*.d
+*.o
+*.dblite
+Pods/
+ios/godot/
+
+# Godot 4+ specific ignores
+demo/.godot/*
+!demo/.godot/uid_cache.bin
+
+# Godot-specific ignores
+.import/
