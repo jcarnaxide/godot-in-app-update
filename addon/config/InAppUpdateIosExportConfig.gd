@@ -2,7 +2,7 @@
 # © 2025-present https://github.com/jcarnaxide
 #
 
-class_name AdmobIosExportConfig extends AdmobExportConfig
+class_name InAppUpdateIosExportConfig extends InAppUpdateExportConfig
 
 const IOS_CONFIG_FILE_PATH: String = "res://addons/" + PLUGIN_NAME + "/ios_export.cfg"
 
@@ -26,7 +26,7 @@ func load_platform_specific_export_config_from_file(a_config_file: ConfigFile) -
 	return Error.OK
 
 
-func load_platform_specific_export_config_from_node(a_node: Admob) -> Error:
+func load_platform_specific_export_config_from_node(a_node: InAppUpdate) -> Error:
 	att_enabled = a_node.att_enabled
 	att_text = a_node.att_text
 
@@ -35,5 +35,5 @@ func load_platform_specific_export_config_from_node(a_node: Admob) -> Error:
 
 func print_loaded_config() -> void:
 	super.print_loaded_config()
-	Admob.log_info("... att_enabled: %s" % ("true" if att_enabled else "false"))
-	Admob.log_info("... att_text: %s" % att_text)
+	InAppUpdate.log_info("... att_enabled: %s" % ("true" if att_enabled else "false"))
+	InAppUpdate.log_info("... att_text: %s" % att_text)
