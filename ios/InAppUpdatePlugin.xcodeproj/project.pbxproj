@@ -3,14 +3,8 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 70;
 	objects = {
-
-/* Begin PBXBuildFile section */
-		76F63C7F93DD5B2559E2044D /* Pods_AdmobPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9546300E1AD87BCF20A8286 /* Pods_AdmobPlugin.framework */; };
-		90CAAA9924E71FF10013969F /* admob_plugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90CAAA9824E71FF10013969F /* admob_plugin.mm */; };
-		90CAAAA424E724C50013969F /* admob_plugin_implementation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90CAAAA324E724C50013969F /* admob_plugin_implementation.mm */; };
-/* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		90CAAA9224E71FF10013969F /* CopyFiles */ = {
@@ -25,22 +19,36 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		691F31590E47F612B32B609A /* Pods-AdmobPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdmobPlugin.release.xcconfig"; path = "Target Support Files/Pods-AdmobPlugin/Pods-AdmobPlugin.release.xcconfig"; sourceTree = "<group>"; };
-		90CAAA9424E71FF10013969F /* libadmob_plugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libadmob_plugin.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		90CAAA9724E71FF10013969F /* admob_plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = admob_plugin.h; sourceTree = "<group>"; };
-		90CAAA9824E71FF10013969F /* admob_plugin.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = admob_plugin.mm; sourceTree = "<group>"; };
-		90CAAAA324E724C50013969F /* admob_plugin_implementation.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = admob_plugin_implementation.mm; sourceTree = "<group>"; };
-		90CAAAA524E724D00013969F /* admob_plugin_implementation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = admob_plugin_implementation.h; sourceTree = "<group>"; };
-		9D55AFBEDD1161A956405E6A /* Pods-AdmobPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdmobPlugin.debug.xcconfig"; path = "Target Support Files/Pods-AdmobPlugin/Pods-AdmobPlugin.debug.xcconfig"; sourceTree = "<group>"; };
-		B9546300E1AD87BCF20A8286 /* Pods_AdmobPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdmobPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17430E942EC1378100C868F2 /* libInAppUpdatePlugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libInAppUpdatePlugin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		17430EAB2EC1396A00C868F2 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			platformFiltersByRelativePath = {
+				inappupdate_logger.o = (
+					ios,
+				);
+				inappupdate_plugin.o = (
+					ios,
+				);
+				inappupdate_plugin_implementation.o = (
+					ios,
+				);
+			};
+			target = 90CAAA9324E71FF10013969F /* InAppUpdatePlugin */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		17430E902EC1371300C868F2 /* InAppUpdatePlugin */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (17430EAB2EC1396A00C868F2 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = InAppUpdatePlugin; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		90CAAA9124E71FF10013969F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76F63C7F93DD5B2559E2044D /* Pods_AdmobPlugin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +58,7 @@
 		90CAAA8B24E71FF10013969F = {
 			isa = PBXGroup;
 			children = (
-				90CAAA9624E71FF10013969F /* AdmobPlugin */,
+				17430E902EC1371300C868F2 /* InAppUpdatePlugin */,
 				90CAAA9524E71FF10013969F /* Products */,
 				90CAAAA824E72A8A0013969F /* Frameworks */,
 				EB1D3781559431A19A242FC1 /* Pods */,
@@ -60,26 +68,14 @@
 		90CAAA9524E71FF10013969F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				90CAAA9424E71FF10013969F /* libadmob_plugin.a */,
+				17430E942EC1378100C868F2 /* libInAppUpdatePlugin.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		90CAAA9624E71FF10013969F /* AdmobPlugin */ = {
-			isa = PBXGroup;
-			children = (
-				90CAAA9724E71FF10013969F /* admob_plugin.h */,
-				90CAAA9824E71FF10013969F /* admob_plugin.mm */,
-				90CAAAA524E724D00013969F /* admob_plugin_implementation.h */,
-				90CAAAA324E724C50013969F /* admob_plugin_implementation.mm */,
-			);
-			path = AdmobPlugin;
 			sourceTree = "<group>";
 		};
 		90CAAAA824E72A8A0013969F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B9546300E1AD87BCF20A8286 /* Pods_AdmobPlugin.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -87,19 +83,16 @@
 		EB1D3781559431A19A242FC1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9D55AFBEDD1161A956405E6A /* Pods-AdmobPlugin.debug.xcconfig */,
-				691F31590E47F612B32B609A /* Pods-AdmobPlugin.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		90CAAA9324E71FF10013969F /* AdmobPlugin */ = {
+		90CAAA9324E71FF10013969F /* InAppUpdatePlugin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 90CAAA9D24E71FF10013969F /* Build configuration list for PBXNativeTarget "AdmobPlugin" */;
+			buildConfigurationList = 90CAAA9D24E71FF10013969F /* Build configuration list for PBXNativeTarget "InAppUpdatePlugin" */;
 			buildPhases = (
 				A6E6A97D05CD23243D31A81C /* [CP] Check Pods Manifest.lock */,
 				90CAAA9024E71FF10013969F /* Sources */,
@@ -110,9 +103,12 @@
 			);
 			dependencies = (
 			);
-			name = AdmobPlugin;
-			productName = AdmobPlugin;
-			productReference = 90CAAA9424E71FF10013969F /* libadmob_plugin.a */;
+			fileSystemSynchronizedGroups = (
+				17430E902EC1371300C868F2 /* InAppUpdatePlugin */,
+			);
+			name = InAppUpdatePlugin;
+			productName = InAppUpdatePlugin;
+			productReference = 17430E942EC1378100C868F2 /* libInAppUpdatePlugin.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -129,7 +125,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 90CAAA8F24E71FF10013969F /* Build configuration list for PBXProject "AdmobPlugin" */;
+			buildConfigurationList = 90CAAA8F24E71FF10013969F /* Build configuration list for PBXProject "InAppUpdatePlugin" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -142,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				90CAAA9324E71FF10013969F /* AdmobPlugin */,
+				90CAAA9324E71FF10013969F /* InAppUpdatePlugin */,
 			);
 		};
 /* End PBXProject section */
@@ -163,7 +159,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AdmobPlugin-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-InAppUpdatePlugin-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -177,8 +173,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90CAAAA424E724C50013969F /* admob_plugin_implementation.mm in Sources */,
-				90CAAA9924E71FF10013969F /* admob_plugin.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,9 +291,9 @@
 		};
 		90CAAA9E24E71FF10013969F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D55AFBEDD1161A956405E6A /* Pods-AdmobPlugin.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/godot",
@@ -333,7 +327,7 @@
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-ObjC"
+					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -343,9 +337,9 @@
 		};
 		90CAAA9F24E71FF10013969F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 691F31590E47F612B32B609A /* Pods-AdmobPlugin.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/godot",
@@ -373,7 +367,7 @@
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-ObjC"
+					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -384,7 +378,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		90CAAA8F24E71FF10013969F /* Build configuration list for PBXProject "AdmobPlugin" */ = {
+		90CAAA8F24E71FF10013969F /* Build configuration list for PBXProject "InAppUpdatePlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				90CAAA9B24E71FF10013969F /* Debug */,
@@ -393,7 +387,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90CAAA9D24E71FF10013969F /* Build configuration list for PBXNativeTarget "AdmobPlugin" */ = {
+		90CAAA9D24E71FF10013969F /* Build configuration list for PBXNativeTarget "InAppUpdatePlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				90CAAA9E24E71FF10013969F /* Debug */,

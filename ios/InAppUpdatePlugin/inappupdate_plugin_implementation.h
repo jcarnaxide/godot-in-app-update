@@ -5,14 +5,13 @@
 #ifndef inappupdate_plugin_implementation_h
 #define inappupdate_plugin_implementation_h
 
+#include "core/object/class_db.h"
 
 class InAppUpdatePlugin : public Object {
 	GDCLASS(InAppUpdatePlugin, Object);
 
 private:
 	static InAppUpdatePlugin* instance; // Singleton instance
-
-	id<NSObject> foregroundObserver; // Notification observer token
 
 	void hello_world();
 
