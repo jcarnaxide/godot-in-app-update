@@ -36,7 +36,6 @@ func _exit_tree() -> void:
 
 class AndroidExportPlugin extends EditorExportPlugin:
 	var _plugin_name = PLUGIN_NAME
-	var _export_config: InAppUpdateAndroidExportConfig
 
 
 	func _supports_platform(platform: EditorExportPlatform) -> bool:
@@ -54,19 +53,8 @@ class AndroidExportPlugin extends EditorExportPlugin:
 		return _plugin_name
 
 
-	func _export_begin(features: PackedStringArray, is_debug: bool, path: String, flags: int) -> void:
-		if _supports_platform(get_export_platform()):
-			_export_config = InAppUpdateAndroidExportConfig.new()
-			if not _export_config.export_config_file_exists() or _export_config.load_export_config_from_file() != OK:
-				_export_config.load_export_config_from_node()
-
-
 	func _get_android_dependencies(platform: EditorExportPlatform, debug: bool) -> PackedStringArray:
 		var deps: PackedStringArray = PackedStringArray(ANDROID_DEPENDENCIES)
-		if _export_config and _export_config.enabled_mediation_networks.size() > 0:
-			for __network in _export_config.enabled_mediation_networks:
-				for __dependency in __network.android_dependencies:
-					deps.append(__dependency)
 
 		InAppUpdate.log_info("Android dependencies: %s" % str(deps))
 
@@ -75,8 +63,6 @@ class AndroidExportPlugin extends EditorExportPlugin:
 
 class IosExportPlugin extends EditorExportPlugin:
 	var _plugin_name = PLUGIN_NAME
-	var _export_config: InAppUpdateIosExportConfig
-	var _export_path: String
 
 
 	func _supports_platform(platform: EditorExportPlatform) -> bool:
@@ -89,10 +75,6 @@ class IosExportPlugin extends EditorExportPlugin:
 
 	func _export_begin(features: PackedStringArray, is_debug: bool, path: String, flags: int) -> void:
 		if _supports_platform(get_export_platform()):
-			_export_path = path.simplify_path()
-			_export_config = InAppUpdateIosExportConfig.new()
-			if not _export_config.export_config_file_exists() or _export_config.load_export_config_from_file() != OK:
-				_export_config.load_export_config_from_node()
 
 			for __framework in IOS_FRAMEWORKS:
 				add_apple_embedded_platform_framework(__framework)
@@ -102,8 +84,3 @@ class IosExportPlugin extends EditorExportPlugin:
 
 			for __flag in IOS_LINKER_FLAGS:
 				add_apple_embedded_platform_linker_flags(__flag)
-
-
-	func _export_end() -> void:
-		if _supports_platform(get_export_platform()):
-			_install_mediation_dependencies(_export_path.get_base_dir(), _export_path.get_file().get_basename())

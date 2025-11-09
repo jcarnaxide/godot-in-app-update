@@ -177,9 +177,6 @@ else:
 # Adding header files
 env.Append(CPPPATH=[
 	f'{plugin_name}',
-	f'{plugin_name}/adformat',
-	f'{plugin_name}/mediation',
-	f'{plugin_name}/model',
 	'godot',
 	'godot/platform/ios',
 	'godot/drivers/apple_embedded'
