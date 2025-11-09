@@ -1,5 +1,5 @@
 //
-// © 2024-present https://github.com/cengiz-pz
+// © 2025-present https://github.com/jcarnaxide
 //
 
 #import "privacy_settings.h"

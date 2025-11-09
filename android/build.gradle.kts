@@ -1,5 +1,5 @@
 //
-// © 2024-present https://github.com/cengiz-pz
+// © 2025-present https://github.com/jcarnaxide
 //
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 

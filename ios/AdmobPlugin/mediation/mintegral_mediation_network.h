@@ -1,5 +1,5 @@
 //
-// © 2024-present https://github.com/cengiz-pz
+// © 2025-present https://github.com/jcarnaxide
 //
 
 #ifndef mintegral_mediation_network_h
